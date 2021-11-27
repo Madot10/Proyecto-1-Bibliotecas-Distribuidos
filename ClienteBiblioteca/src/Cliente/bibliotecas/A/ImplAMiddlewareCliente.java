@@ -16,7 +16,7 @@ public class ImplAMiddlewareCliente implements IMiddlewareCliente {
 		String ZTitle = "Get Title " + cmdTitle.split("Pedir Libro")[0].trim(); 
 		
 		// 2- Construir url RMI
-		String url = Cliente.obtenerURLrmi(letraDestino) + "/BibliotecaA";
+		String url = Cliente.obtenerURLrmi(letraDestino);
 		System.out.println("RMI URL: " + url);
 		
 		// 3- Llamar metodo remoto
@@ -49,7 +49,7 @@ public class ImplAMiddlewareCliente implements IMiddlewareCliente {
 				String ZAuthor = "Get Author " + cmdAuthor.split("Pedir Autor")[0].trim(); 
 				
 				// 2- Construir url RMI
-				String url = Cliente.obtenerURLrmi(letraDestino) + "/BibliotecaA";
+				String url = Cliente.obtenerURLrmi(letraDestino);
 				System.out.println("RMI URL: " + url);
 				
 				// 3- Llamar metodo remoto

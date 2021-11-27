@@ -78,7 +78,7 @@ public class Cliente {
 	        }
 		
 		
-		String urlRMI = "rmi://" + ip + ":" + port;
+		String urlRMI = "rmi://" + ip + ":" + port + "/Biblioteca" + letraDestino.name();
 		
 		return urlRMI;
 	}
