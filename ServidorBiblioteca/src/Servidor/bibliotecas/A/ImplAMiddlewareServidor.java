@@ -35,8 +35,20 @@ public class ImplAMiddlewareServidor extends UnicastRemoteObject implements IMid
 
 	@Override
 	public String GetAuthor(String cmdAuthor) throws RemoteException {
-		// TODO Auto-generated method stub
-		return null;
+		// 1- Decodificar Z a LN
+				String peticion = "Pedir Autor " + cmdAuthor.split("Get Author")[0].trim();
+				System.out.println("Traduccion peticion: " + peticion);
+				
+				// 2- Llamar metodo biblioteca servidor
+				String respuestaLN = implBiblioteca.RealizarBusquedaNombreLibro(peticion);
+				System.out.println("Respuesta: " + respuestaLN);
+				
+				// 3- Codificar a Z respuesta
+				String respuestaZ = "Title " + respuestaLN.split("Libro")[1].trim();
+				System.out.println("RespuestaZZZZ: " + respuestaZ + "\n " + respuestaLN.split("Libro")[1]);
+				
+				// 4- Enviar
+				return respuestaZ;
 	}
 
 }

@@ -19,8 +19,15 @@ public class ImplABibliotecaServidor implements IBibliotecaServidor {
 
 	@Override
 	public String RealizarBusquedaNombreAutor(String comandoLN) {
-		// TODO Auto-generated method stub
-		return null;
+		// 1- Obtener autor
+				String autorLibro = comandoLN.split("Pedir Autor")[0].trim();
+				
+				// 2- Buscar en repositorio
+				
+				// 3- Codificar en LN primera respuesta
+				String respuestaLN = "Libro " + "Spider-man 0";
+				
+				return respuestaLN;
 	}
 
 }
