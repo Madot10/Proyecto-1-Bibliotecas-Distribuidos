@@ -12,7 +12,7 @@ public class ImplCBibliotecaServidor implements IBibliotecaServidor {
 				// 2- Buscar en repositorio
 				
 				// 3- Codificar en LN primera respuesta
-				String respuestaLN = "Vol " + "Spider-man 4";
+				String respuestaLN = "Vol " + "Spider-man CLibro";
 				
 				return respuestaLN;
 	}
@@ -25,7 +25,7 @@ public class ImplCBibliotecaServidor implements IBibliotecaServidor {
 		// 2- Buscar en repositorio
 		
 		// 3- Codificar en LN primera respuesta
-		String respuestaLN = "Vol " + "Spider-man 0";
+		String respuestaLN = "Vol " + "Spider-man CAutor";
 		
 		return respuestaLN;
 	}

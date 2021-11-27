@@ -23,11 +23,11 @@ public class ImplAMiddlewareServidor extends UnicastRemoteObject implements IMid
 		
 		// 2- Llamar metodo biblioteca servidor
 		String respuestaLN = implBiblioteca.RealizarBusquedaNombreLibro(peticion);
-		System.out.println("Respuesta: " + respuestaLN);
+		System.out.println("Respuesta a enviar: " + respuestaLN);
 		
 		// 3- Codificar a Z respuesta
-		String respuestaZ = "Title " + respuestaLN.split("Libro")[1].trim();
-		System.out.println("RespuestaZZZZ: " + respuestaZ + "\n " + respuestaLN.split("Libro")[1]);
+		String respuestaZ = "Title " + respuestaLN.split("Libro",1)[0].trim();
+		System.out.println("RespuestaZZZZ: " + respuestaZ);
 		
 		// 4- Enviar
 		return respuestaZ;
@@ -40,12 +40,12 @@ public class ImplAMiddlewareServidor extends UnicastRemoteObject implements IMid
 				System.out.println("Traduccion peticion: " + peticion);
 				
 				// 2- Llamar metodo biblioteca servidor
-				String respuestaLN = implBiblioteca.RealizarBusquedaNombreLibro(peticion);
+				String respuestaLN = implBiblioteca.RealizarBusquedaNombreAutor(peticion);
 				System.out.println("Respuesta: " + respuestaLN);
 				
 				// 3- Codificar a Z respuesta
-				String respuestaZ = "Title " + respuestaLN.split("Libro")[1].trim();
-				System.out.println("RespuestaZZZZ: " + respuestaZ + "\n " + respuestaLN.split("Libro")[1]);
+				String respuestaZ = "Title " + respuestaLN.split("Libro",1)[0].trim();
+				System.out.println("RespuestaZZZZ: " + respuestaZ);
 				
 				// 4- Enviar
 				return respuestaZ;
