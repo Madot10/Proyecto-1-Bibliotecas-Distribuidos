@@ -138,5 +138,17 @@ public class Servidor  {
 			e.printStackTrace();
 		}
 	}
+	
+	public static void registrarEnLog(String mensaje, boolean esRecepcion, String origen){
+		LogWriter log = new LogWriter();
+		try {
+			System.out.println("Creando archivo");
+			log.crearArchivo();
+			log.escribirArchivo((esRecepcion ? "[ENTRANTE] " : "[SALIENTE] ") + "(Origen: " + origen + "): " + mensaje);
+			System.out.println("Escritura en archivo finalizada");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 }
 

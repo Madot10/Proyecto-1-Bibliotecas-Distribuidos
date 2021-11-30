@@ -21,18 +21,13 @@ public class ImplAMiddlewareServidor extends UnicastRemoteObject implements IMid
 	}
 
 	@Override
-	public String GetTitle(String cmdTitle) throws RemoteException{
+	public String GetTitle(String cmdTitle, String bibliotecaOrigen) throws RemoteException{
 		// 1- Decodificar Z a LN
 		//System.out.println("+Llega: " + cmdTitle);
 		String peticion = "Pedir Libro " + cmdTitle.split("Get Title")[1].trim();
-		try {
-			System.out.println("RemoteServer: "+  RemoteServer.getClientHost());
-		} catch (ServerNotActiveException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		//Registrar salida
-		Servidor.registrarEnLog(cmdTitle, true);
+
+		//Registrar entrada
+		Servidor.registrarEnLog(cmdTitle, true, bibliotecaOrigen);
 		//System.out.println("Traduccion peticion: " + peticion);
 		
 		// 2- Llamar metodo biblioteca servidor
@@ -42,7 +37,7 @@ public class ImplAMiddlewareServidor extends UnicastRemoteObject implements IMid
 		String respuestaZ = "Title " + respuestaLN.split("Libro",1)[0].trim();
 		System.out.println("Respuesta a enviar: " + respuestaLN + " EN Z: " + respuestaZ);
 		
-		//Registrar entrada
+		//Registrar salida
 		Servidor.registrarEnLog(respuestaZ, false);
 		
 		// 4- Enviar
@@ -50,10 +45,13 @@ public class ImplAMiddlewareServidor extends UnicastRemoteObject implements IMid
 	}
 
 	@Override
-	public String GetAuthor(String cmdAuthor) throws RemoteException{
+	public String GetAuthor(String cmdAuthor, String bibliotecaOrigen) throws RemoteException{
 		// 1- Decodificar Z a LN
 		String peticion = "Pedir Autor " + cmdAuthor.split("Get Author")[1].trim();
 		System.out.println("Traduccion peticion: " + peticion);
+		
+		//Registrar entrada
+		Servidor.registrarEnLog(cmdAuthor, true, bibliotecaOrigen);
 		
 		// 2- Llamar metodo biblioteca servidor
 		String respuestaLN = implBiblioteca.RealizarBusquedaNombreAutor(peticion);
@@ -62,6 +60,10 @@ public class ImplAMiddlewareServidor extends UnicastRemoteObject implements IMid
 		// 3- Codificar a Z respuesta
 		String respuestaZ = "Title " + respuestaLN.split("Libro",1)[0].trim();
 		System.out.println("RespuestaZZZZ: " + respuestaZ);
+		
+		//Registrar salida
+		Servidor.registrarEnLog(respuestaZ, false);
+				
 
 		// 4- Enviar
 		return respuestaZ;
