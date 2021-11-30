@@ -31,7 +31,7 @@ public class ImplAMiddlewareCliente implements IMiddlewareCliente {
 
 			IMiddlewareServidor srv = (IMiddlewareServidor) Naming.lookup(url);
 
-			String resultadoZ = srv.GetTitle(ZTitle);
+			String resultadoZ = srv.GetTitle(ZTitle, "A");
             System.out.println("RespuestaZ: " + resultadoZ);
             
          // 4- Decodificar a LN
@@ -62,16 +62,24 @@ public class ImplAMiddlewareCliente implements IMiddlewareCliente {
 				String url = Cliente.obtenerURLrmi(letraDestino);
 				System.out.println("RMI URL: " + url);
 				
+				//Registrar salida
+				Cliente.registrarEnLog(cmdAuthor,false);
+				Cliente.registrarEnLog(ZAuthor + "| Destino: " + letraDestino.name(),false);
+				
+				
 				// 3- Llamar metodo remoto
 				try {
 
 					IMiddlewareServidor srv = (IMiddlewareServidor) Naming.lookup(url);
 
-					String resultadoZ = srv.GetAuthor(ZAuthor);
+					String resultadoZ = srv.GetAuthor(ZAuthor, "A");
 		            System.out.println("RespuestaZ: " + resultadoZ);
 		            
 		         // 4- Decodificar a LN
 		            String resultadoLN = "Libro " + resultadoZ.split("Title")[1].trim();
+		            
+		            //Registrar entrada
+		    		Cliente.registrarEnLog(resultadoZ,true);
 		            
 		            return resultadoLN;
 		        }
