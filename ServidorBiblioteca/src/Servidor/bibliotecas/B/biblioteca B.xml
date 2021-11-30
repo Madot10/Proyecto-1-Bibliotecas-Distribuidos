@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bibliotecas>
+	<bibliotecaB>
+		<book>
+			<titulo>Romeo y Julieta</titulo>
+			<autor>William Shakespeare</autor>
+		</book>
+		<book>
+			<titulo>Cumbres borrascosas</titulo>
+			<autor>Emily Bronte</autor>
+		</book>
+		<book>
+			<titulo>El retrato de Dorian Gray</titulo>
+			<autor>Oscar Wilde</autor>
+		</book>
+		<book>
+			<titulo>El Lazarillo de Tormes </titulo>
+			<autor>Anonimo</autor>
+		</book>
+	</bibliotecaB>
+</bibliotecas>

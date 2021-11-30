@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bibliotecas>
+	<bibliotecaC>
+		<book>
+			<vol>Dracula</vol>
+			<autor>Bram Stoker</autor>
+		</book>
+		<book>
+			<vol>Crimen y castigo</vol>
+			<autor>Fiodor Dostoyevski</autor>
+		</book>
+		<book>
+			<vol>Los Miserables</vol>
+			<autor>Victor Hugo</autor>
+		</book>
+		<book>
+			<vol>El Conde de Montecristo </vol>
+			<autor>Alejandro Dumas</autor>
+		</book>
+	</bibliotecaC>
+</bibliotecas>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bibliotecas>
+	<bibliotecaA>
+		<book>
+			<libro>El principito</libro>
+			<autor>Antoine de Saint Exupery</autor>
+		</book>
+		<book>
+			<libro>La metamorfosis</libro>
+			<autor>AFranz Kafka</autor>
+		</book>
+		<book>
+			<libro>Orgullo y prejuicio</libro>
+			<autor>Jane Austen</autor>
+		</book>
+		<book>
+			<libro>Don Quijote de la Mancha</libro>
+			<autor>Miguel de Cervantes Saavedra</autor>
+		</book>
+	</bibliotecaA>
+</bibliotecas>
