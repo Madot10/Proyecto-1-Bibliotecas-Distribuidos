@@ -18,7 +18,7 @@ private IBibliotecaServidor implBiblioteca;
 	@Override
 	public String GetTitle(String cmdTitle) throws RemoteException {
 		// 1- Decodificar Z a LN
-				String peticion = "Encontrar Vol " + cmdTitle.split("Get Title")[0].trim();
+				String peticion = "Encontrar Vol " + cmdTitle.split("Get Title")[1].trim();
 				System.out.println("Traduccion peticion: " + peticion);
 				
 				// 2- Llamar metodo biblioteca servidor
@@ -36,7 +36,7 @@ private IBibliotecaServidor implBiblioteca;
 	@Override
 	public String GetAuthor(String cmdAuthor) throws RemoteException {
 		// 1- Decodificar Z a LN
-		String peticion = "Encontrar Autor " + cmdAuthor.split("Get Author")[0].trim();
+		String peticion = "Encontrar Autor " + cmdAuthor.split("Get Author")[1].trim();
 		System.out.println("Traduccion peticion: " + peticion);
 		
 		// 2- Llamar metodo biblioteca servidor

@@ -1,0 +1,5 @@
+[2021/11/30 09:03:24] -> [SALIENTE] Pedir Libro asdasd
+[2021/11/30 09:03:24] -> [ENTRANTE] Title Libro Spider-man ALibro
+[2021/11/30 09:09:19] -> [SALIENTE] Pedir Libro asdasd
+[2021/11/30 09:09:19] -> [SALIENTE] Get Title asdasd| Destino: A
+[2021/11/30 09:09:19] -> [ENTRANTE] Title Libro Spider-man ALibro

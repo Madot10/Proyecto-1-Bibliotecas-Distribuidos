@@ -1,1 +1,12 @@
-[Fecha del mensaje] -> 2021/11/27 22:52:47 [mensaje] -> 
+[Fecha del mensaje] -> 2021/11/30 08:35:26 [mensaje] -> 
+[Fecha del mensaje] -> 2021/11/30 08:38:02 [mensaje] -> 
+[Fecha del mensaje] -> 2021/11/30 08:39:55 [mensaje] -> 
+[Fecha del mensaje] -> 2021/11/30 08:42:01 [mensaje] -> 
+[Fecha del mensaje] -> 2021/11/30 08:43:54 [mensaje] -> 
+[Fecha del mensaje] -> 2021/11/30 08:44:26 [mensaje] -> 
+[Fecha del mensaje] -> 2021/11/30 08:47:58 [mensaje] -> 
+[Fecha del mensaje] -> 2021/11/30 08:48:29 [mensaje] -> sadadas
+[2021/11/30 09:03:24] -> [SALIENTE] Get Title asdasd
+[2021/11/30 09:03:24] -> [ENTRANTE] Title Libro Spider-man ALibro
+[2021/11/30 09:09:19] -> [ENTRANTE] Get Title asdasd
+[2021/11/30 09:09:19] -> [SALIENTE] Title Libro Spider-man ALibro

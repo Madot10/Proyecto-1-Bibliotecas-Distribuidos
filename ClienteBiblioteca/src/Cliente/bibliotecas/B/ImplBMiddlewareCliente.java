@@ -14,7 +14,7 @@ public class ImplBMiddlewareCliente implements IMiddlewareCliente {
 	@Override
 	public String GetTitle(String cmdTitle, EBibliotecaDestino letraDestino) {
 		// 1- Construir nuevo comando
-				String ZTitle = "Get Title " + cmdTitle.split("Buscar Título")[0].trim(); 
+				String ZTitle = "Get Title " + cmdTitle.split("Buscar Título")[1].trim(); 
 				
 				// 2- Construir url RMI
 				String url = Cliente.obtenerURLrmi(letraDestino);
@@ -47,7 +47,7 @@ public class ImplBMiddlewareCliente implements IMiddlewareCliente {
 	@Override
 	public String GetAuthor(String cmdAuthor, EBibliotecaDestino letraDestino) {
 		// 1- Construir nuevo comando
-		String ZAuthor = "Get Author " + cmdAuthor.split("Buscar Autor")[0].trim(); 
+		String ZAuthor = "Get Author " + cmdAuthor.split("Buscar Autor")[1].trim(); 
 		
 		// 2- Construir url RMI
 		String url = Cliente.obtenerURLrmi(letraDestino);

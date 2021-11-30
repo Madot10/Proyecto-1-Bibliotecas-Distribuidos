@@ -13,7 +13,14 @@ public class ImplAMiddlewareCliente implements IMiddlewareCliente {
 	@Override
 	public String GetTitle(String cmdTitle, EBibliotecaDestino letraDestino) {
 		// 1- Construir nuevo comando
-		String ZTitle = "Get Title " + cmdTitle.split("Pedir Libro")[0].trim(); 
+		//System.out.println("**A enviar: " + cmdTitle);
+		String ZTitle = "Get Title " + cmdTitle.split("Pedir Libro")[1].trim(); 
+		//System.out.println("**Zzzzz: " + ZTitle);
+		System.out.println("*Comando LN: " + cmdTitle + " En Z: " + ZTitle);
+		
+		//Registrar salida
+		Cliente.registrarEnLog(cmdTitle,false);
+		Cliente.registrarEnLog(ZTitle + "| Destino: " + letraDestino.name(),false);
 		
 		// 2- Construir url RMI
 		String url = Cliente.obtenerURLrmi(letraDestino);
@@ -29,6 +36,9 @@ public class ImplAMiddlewareCliente implements IMiddlewareCliente {
             
          // 4- Decodificar a LN
             String resultadoLN = "Libro " + resultadoZ.split("Title")[1].trim();
+            
+          //Registrar entrada
+    		Cliente.registrarEnLog(resultadoZ,true);
             
             return resultadoLN;
         }
@@ -46,7 +56,7 @@ public class ImplAMiddlewareCliente implements IMiddlewareCliente {
 	@Override
 	public String GetAuthor(String cmdAuthor, EBibliotecaDestino letraDestino) {
 		// 1- Construir nuevo comando
-				String ZAuthor = "Get Author " + cmdAuthor.split("Pedir Autor")[0].trim(); 
+				String ZAuthor = "Get Author " + cmdAuthor.split("Pedir Autor")[1].trim(); 
 				
 				// 2- Construir url RMI
 				String url = Cliente.obtenerURLrmi(letraDestino);
