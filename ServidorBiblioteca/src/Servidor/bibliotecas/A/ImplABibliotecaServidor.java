@@ -2,9 +2,15 @@ package Servidor.bibliotecas.A;
 
 import java.io.IOException;
 
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.xml.sax.SAXException;
+
 import Servidor.IBibliotecaServidor;
 import Servidor.LogWriter;
 import Servidor.Servidor;
+import Servidor.bibliotecas.A.LecturaBibliotecaA;
+import org.jdom2.JDOMException;
 
 public class ImplABibliotecaServidor implements IBibliotecaServidor {
 
@@ -16,6 +22,18 @@ public class ImplABibliotecaServidor implements IBibliotecaServidor {
 		//System.out.println("-ComandoLN: " + comandoLN);
 	
 		// 2- Buscar en repositorio
+		/*
+		LecturaBibliotecaA bibliotecaA = new LecturaBibliotecaA();
+		String respuestaBiblioteca = "";
+		try {
+			respuestaBiblioteca = bibliotecaA.leerLibro(nombreLibro);
+		} catch (ParserConfigurationException | SAXException | IOException e) {
+			e.printStackTrace();
+		}
+
+		System.out.println("RESPUESTA BIBLIOTECA");
+		System.out.println(respuestaBiblioteca);
+		*/
 		
 		// 3- Codificar en LN primera respuesta
 		String respuestaLN = "Libro " + "Spider-man ALibro";
