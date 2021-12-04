@@ -40,7 +40,7 @@ public class ImplAMiddlewareCliente implements IMiddlewareCliente {
           //Registrar entrada
     		Cliente.registrarEnLog(resultadoZ,true);
             
-            return resultadoLN;
+            return resultadoZ.split("Title")[1].trim();
         }
         catch (RemoteException e) {
             System.err.println("Error de comunicacion: " + e.toString());
@@ -81,7 +81,7 @@ public class ImplAMiddlewareCliente implements IMiddlewareCliente {
 		            //Registrar entrada
 		    		Cliente.registrarEnLog(resultadoZ,true);
 		            
-		            return resultadoLN;
+		            return resultadoZ.split("Title")[1].trim();
 		        }
 		        catch (RemoteException e) {
 		            System.err.println("Error de comunicacion: " + e.toString());
