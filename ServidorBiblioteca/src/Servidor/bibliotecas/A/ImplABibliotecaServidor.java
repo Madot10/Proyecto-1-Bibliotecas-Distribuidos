@@ -22,7 +22,7 @@ public class ImplABibliotecaServidor implements IBibliotecaServidor {
 		//System.out.println("-ComandoLN: " + comandoLN);
 	
 		// 2- Buscar en repositorio
-		/*
+		
 		LecturaBibliotecaA bibliotecaA = new LecturaBibliotecaA();
 		String respuestaBiblioteca = "";
 		try {
@@ -33,10 +33,11 @@ public class ImplABibliotecaServidor implements IBibliotecaServidor {
 
 		System.out.println("RESPUESTA BIBLIOTECA");
 		System.out.println(respuestaBiblioteca);
-		*/
+		
 		
 		// 3- Codificar en LN primera respuesta
-		String respuestaLN = "Libro " + "Spider-man ALibro";
+		//String respuestaLN = "Libro " + "Spider-man ALibro";
+		String respuestaLN = respuestaBiblioteca;
 
 		//4- Responder
 		
@@ -49,9 +50,20 @@ public class ImplABibliotecaServidor implements IBibliotecaServidor {
 		String autorLibro = comandoLN.split("Pedir Autor")[1].trim();
 		
 		// 2- Buscar en repositorio
+		LecturaBibliotecaA bibliotecaA = new LecturaBibliotecaA();
+		String respuestaBiblioteca = "";
+		try {
+			respuestaBiblioteca = bibliotecaA.leerAutor(autorLibro);
+		} catch (ParserConfigurationException | SAXException | IOException e) {
+			e.printStackTrace();
+		}
+
+		System.out.println("RESPUESTA BIBLIOTECA");
+		System.out.println(respuestaBiblioteca);
 		
 		// 3- Codificar en LN primera respuesta
-		String respuestaLN = "Libro " + "Spider-man AAutor";
+		//String respuestaLN = "Libro " + "Spider-man AAutor";
+		String respuestaLN = respuestaBiblioteca;
 		
 		// 4- Guardar mensaje en archivo
 		LogWriter log = new LogWriter();

@@ -31,7 +31,7 @@ private IBibliotecaServidor implBiblioteca;
 				
 				// 3- Codificar a Z respuesta
 				String respuestaZ = "Title " + respuestaLN.split("Vol",1)[0].trim();
-				System.out.println("RespuestaZZZZ: " + respuestaZ + "\n " + respuestaLN.split("Vol")[1]);
+				System.out.println("RespuestaZZZZ: " + respuestaZ + "\n " + respuestaLN.split("Vol")[0]);
 				
 				//Registrar salida
 				Servidor.registrarEnLog(respuestaZ, false);
