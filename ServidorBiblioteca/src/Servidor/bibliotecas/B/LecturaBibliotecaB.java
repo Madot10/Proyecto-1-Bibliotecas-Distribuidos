@@ -23,7 +23,7 @@ public class LecturaBibliotecaB {
      * 		Se responde con todos los libros de ese autor 
     */
 
-	public String leerLibro(String libro) throws ParserConfigurationException,
+	public synchronized  String leerLibro(String libro) throws ParserConfigurationException,
     SAXException, IOException {
 		try {
 			
@@ -67,7 +67,7 @@ public class LecturaBibliotecaB {
 	}
 	
 
-	public String leerAutor(String autor) throws ParserConfigurationException,
+	public synchronized  String leerAutor(String autor) throws ParserConfigurationException,
     SAXException, IOException {
 		try {
 			
