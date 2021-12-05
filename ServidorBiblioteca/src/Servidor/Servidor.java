@@ -1,13 +1,16 @@
 package Servidor;
 
+import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.Properties;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 import Servidor.bibliotecas.A.ImplABibliotecaServidor;
 import Servidor.bibliotecas.A.ImplAMiddlewareServidor;
@@ -52,6 +55,7 @@ public class Servidor  {
 		try{
 			// 2.1 - Lee propiedades por puerto
 			// 2.2 - Vincula middleware
+			System.setProperty("java.rmi.server.hostname", obtenerIP(modoActivo));
 			Registry reg = LocateRegistry.createRegistry(obtenerPuerto(modoActivo));
 			reg.rebind("Biblioteca" + modoActivo, implMiddleware);
 			
@@ -125,6 +129,24 @@ public class Servidor  {
             ex.printStackTrace();
         }
 		return 0;
+	}
+	
+	public static String obtenerIP(String modoActivo){
+		try (InputStream input = new FileInputStream("src/resources/config.properties")) {
+
+            Properties prop = new Properties();
+
+            // load a properties file
+            prop.load(input);
+
+            // get the property value and print it out
+            System.out.println(prop.getProperty(modoActivo + ".ip"));
+            return  prop.getProperty(modoActivo + ".ip");
+            
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+		return "localhost";
 	}
 
 	public static void registrarEnLog(String mensaje, boolean esRecepcion){
