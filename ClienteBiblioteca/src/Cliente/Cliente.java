@@ -70,8 +70,8 @@ public class Cliente {
 	            ip = prop.getProperty(destino + ".ip");
 	            port = prop.getProperty(destino + ".port");
 	            
-	            System.out.println(ip);
-	            System.out.println(port);
+	            //System.out.println(ip);
+	            //System.out.println(port);
 
 	        } catch (IOException ex) {
 	            ex.printStackTrace();
@@ -153,10 +153,10 @@ public class Cliente {
 	public static void registrarEnLog(String mensaje, boolean esRecepcion){
 		LogWriter log = new LogWriter();
 		try {
-			System.out.println("Creando archivo");
+			//System.out.println("Creando archivo");
 			log.crearArchivo();
 			log.escribirArchivo((esRecepcion ? "[ENTRANTE] " : "[SALIENTE] ") + mensaje);
-			System.out.println("Escritura en archivo finalizada");
+			//System.out.println("Escritura en archivo finalizada");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

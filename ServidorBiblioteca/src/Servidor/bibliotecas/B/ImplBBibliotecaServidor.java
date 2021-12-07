@@ -27,8 +27,8 @@ public class ImplBBibliotecaServidor implements IBibliotecaServidor {
 					e.printStackTrace();
 				}
 
-				System.out.println("RESPUESTA BIBLIOTECA");
-				System.out.println(respuestaBiblioteca);
+				//System.out.println("RESPUESTA BIBLIOTECA");
+				//System.out.println(respuestaBiblioteca);
 				
 				// 3- Codificar en LN primera respuesta
 				//String respuestaLN = "Título " + "Spider-man BLibro";
@@ -51,8 +51,8 @@ public class ImplBBibliotecaServidor implements IBibliotecaServidor {
 					e.printStackTrace();
 				}
 
-				System.out.println("RESPUESTA BIBLIOTECA");
-				System.out.println(respuestaBiblioteca);
+				//System.out.println("RESPUESTA BIBLIOTECA");
+				//System.out.println(respuestaBiblioteca);
 		
 		
 		// 3- Codificar en LN primera respuesta

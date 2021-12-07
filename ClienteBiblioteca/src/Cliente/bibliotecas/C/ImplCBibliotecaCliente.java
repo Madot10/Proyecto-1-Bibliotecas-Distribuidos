@@ -14,7 +14,7 @@ public class ImplCBibliotecaCliente implements IBibliotecaCliente {
 		
 				if(comandoLN.startsWith("Encontrar Vol")){
 					//Pedir Libro case
-					System.out.println("COMANDO: " + comandoLN);
+					//System.out.println("COMANDO: " + comandoLN);
 					String respuesta = implMiddlewareCliente.GetTitle(comandoLN, letraDestino);
 					return respuesta;
 					

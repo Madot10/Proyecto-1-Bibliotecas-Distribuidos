@@ -18,8 +18,8 @@ public class ImplABibliotecaServidor implements IBibliotecaServidor {
 	public String RealizarBusquedaNombreLibro(String comandoLN) {
 		// 1- Obtener nombre
 		String nombreLibro = comandoLN.split("Pedir Libro")[1].trim();
-		//System.out.println("-Nombre: " + nombreLibro);
-		//System.out.println("-ComandoLN: " + comandoLN);
+		////System.out.println("-Nombre: " + nombreLibro);
+		////System.out.println("-ComandoLN: " + comandoLN);
 	
 		// 2- Buscar en repositorio
 		
@@ -31,8 +31,8 @@ public class ImplABibliotecaServidor implements IBibliotecaServidor {
 			e.printStackTrace();
 		}
 
-		System.out.println("RESPUESTA BIBLIOTECA");
-		System.out.println(respuestaBiblioteca);
+		//System.out.println("RESPUESTA BIBLIOTECA");
+		//System.out.println(respuestaBiblioteca);
 		
 		
 		// 3- Codificar en LN primera respuesta
@@ -58,8 +58,8 @@ public class ImplABibliotecaServidor implements IBibliotecaServidor {
 			e.printStackTrace();
 		}
 
-		System.out.println("RESPUESTA BIBLIOTECA");
-		System.out.println(respuestaBiblioteca);
+		//System.out.println("RESPUESTA BIBLIOTECA");
+		//System.out.println(respuestaBiblioteca);
 		
 		// 3- Codificar en LN primera respuesta
 		//String respuestaLN = "Libro " + "Spider-man AAutor";
@@ -68,10 +68,10 @@ public class ImplABibliotecaServidor implements IBibliotecaServidor {
 		// 4- Guardar mensaje en archivo
 		LogWriter log = new LogWriter();
 		try {
-			System.out.println("Creando archivo");
+			//System.out.println("Creando archivo");
 			log.crearArchivo();
 			log.escribirArchivo(autorLibro);
-			System.out.println("Escritura en archivo finalizada");
+			//System.out.println("Escritura en archivo finalizada");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

@@ -34,21 +34,21 @@ public class LecturaBibliotecaC {
 
             Element books = classElement.getChild("bibliotecaC");
             List<Element> bookList = books.getChildren("book");
-            System.out.println("----------------------------");
-            System.out.println("Lista de libros");
-            System.out.println(bookList.toString());
-            System.out.println("----------------------------");
+            //System.out.println("----------------------------");
+            //System.out.println("Lista de libros");
+            //System.out.println(bookList.toString());
+            //System.out.println("----------------------------");
             
             String respuesta = "";
             
-            System.out.println("SOLICITUD DE LIBRO");
+            //System.out.println("SOLICITUD DE LIBRO");
 
             for (Element book : bookList) {
             
             	if(book.getChildText("vol").toLowerCase().contains(libro.toLowerCase())) {
             		respuesta =  book.getChildText("vol") + ", " + book.getChildText("autor");
-	                System.out.println(respuesta);
-	                System.out.println("----------------------------");
+	                //System.out.println(respuesta);
+	                //System.out.println("----------------------------");
 	                this.respuesta = respuesta;
 	                break;
             	}
@@ -69,6 +69,7 @@ public class LecturaBibliotecaC {
 
 	public synchronized  String leerAutor(String autor) throws ParserConfigurationException,
     SAXException, IOException {
+		boolean isFound = false;
 		try {
 			
             File inputFile = new File("src/Servidor/bibliotecas/C/biblioteca C.xml");
@@ -78,25 +79,26 @@ public class LecturaBibliotecaC {
 
             Element books = classElement.getChild("bibliotecaC");
             List<Element> bookList = books.getChildren("book");
-            System.out.println("----------------------------");
-            System.out.println("Lista de libros");
-            System.out.println(bookList);
-            System.out.println("----------------------------");
+            //System.out.println("----------------------------");
+            //System.out.println("Lista de libros");
+            //System.out.println(bookList);
+            //System.out.println("----------------------------");
             
             String respuesta = "";
             
-            System.out.println("SOLICITUD DE AUTOR");
+            //System.out.println("SOLICITUD DE AUTOR");
             
             respuesta = "Libros del autor " + autor + ": ";
             for (Element book : bookList) {
             	if(book.getChildText("autor").toLowerCase().contains(autor.toLowerCase())) {
             		respuesta = respuesta + book.getChildText("vol") + ", ";
+            		isFound = true;
             	}
             }
             respuesta = respuesta.substring(0, respuesta.length()-2);
-            System.out.println(respuesta);
+            //System.out.println(respuesta);
             this.respuesta = respuesta;
-            System.out.println("----------------------------"); 
+            //System.out.println("----------------------------"); 
             
         } catch(JDOMException e) {
             e.printStackTrace();
@@ -104,7 +106,7 @@ public class LecturaBibliotecaC {
             ioe.printStackTrace();
         }
 
-		if(this.respuesta == null){
+		if(this.respuesta == null || !isFound){
 			this.respuesta = "No se encontró";
 		}
 		return this.respuesta;

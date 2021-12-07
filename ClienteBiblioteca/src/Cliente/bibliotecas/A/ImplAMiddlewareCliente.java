@@ -13,10 +13,10 @@ public class ImplAMiddlewareCliente implements IMiddlewareCliente {
 	@Override
 	public String GetTitle(String cmdTitle, EBibliotecaDestino letraDestino) {
 		// 1- Construir nuevo comando
-		//System.out.println("**A enviar: " + cmdTitle);
+		////System.out.println("**A enviar: " + cmdTitle);
 		String ZTitle = "Get Title " + cmdTitle.split("Pedir Libro")[1].trim(); 
-		//System.out.println("**Zzzzz: " + ZTitle);
-		System.out.println("*Comando LN: " + cmdTitle + " En Z: " + ZTitle);
+		////System.out.println("**Zzzzz: " + ZTitle);
+		//System.out.println("*Comando LN: " + cmdTitle + " En Z: " + ZTitle);
 		
 		//Registrar salida
 		Cliente.registrarEnLog(cmdTitle,false);
@@ -24,7 +24,7 @@ public class ImplAMiddlewareCliente implements IMiddlewareCliente {
 		
 		// 2- Construir url RMI
 		String url = Cliente.obtenerURLrmi(letraDestino);
-		System.out.println("RMI URL: " + url);
+		//System.out.println("RMI URL: " + url);
 		
 		// 3- Llamar metodo remoto
 		try {
@@ -32,7 +32,7 @@ public class ImplAMiddlewareCliente implements IMiddlewareCliente {
 			IMiddlewareServidor srv = (IMiddlewareServidor) Naming.lookup(url);
 
 			String resultadoZ = srv.GetTitle(ZTitle, "A");
-            System.out.println("RespuestaZ: " + resultadoZ);
+            //System.out.println("RespuestaZ: " + resultadoZ);
             
          // 4- Decodificar a LN
             String resultadoLN = "Libro " + resultadoZ.split("Title")[1].trim();
@@ -60,7 +60,7 @@ public class ImplAMiddlewareCliente implements IMiddlewareCliente {
 				
 				// 2- Construir url RMI
 				String url = Cliente.obtenerURLrmi(letraDestino);
-				System.out.println("RMI URL: " + url);
+				//System.out.println("RMI URL: " + url);
 				
 				//Registrar salida
 				Cliente.registrarEnLog(cmdAuthor,false);
@@ -73,7 +73,7 @@ public class ImplAMiddlewareCliente implements IMiddlewareCliente {
 					IMiddlewareServidor srv = (IMiddlewareServidor) Naming.lookup(url);
 
 					String resultadoZ = srv.GetAuthor(ZAuthor, "A");
-		            System.out.println("RespuestaZ: " + resultadoZ);
+		            //System.out.println("RespuestaZ: " + resultadoZ);
 		            
 		         // 4- Decodificar a LN
 		            String resultadoLN = "Libro " + resultadoZ.split("Title")[1].trim();

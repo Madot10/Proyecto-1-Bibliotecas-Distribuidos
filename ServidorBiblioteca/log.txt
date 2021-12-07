@@ -1,0 +1,31 @@
+[2021/12/04 21:41:44] -> [ENTRANTE] (Origen: A): Get Title as
+[2021/12/04 21:41:44] -> [SALIENTE] Title No se encontró
+[2021/12/04 22:08:03] -> [ENTRANTE] (Origen: A): Get Title asda
+[2021/12/04 22:08:03] -> [SALIENTE] Title No se encontró
+[2021/12/06 21:43:59] -> [ENTRANTE] (Origen: A): Get Author aaa
+[2021/12/06 21:43:59] -> aaa
+[2021/12/06 21:43:59] -> [SALIENTE] Title Libros del autor aaa
+[2021/12/06 21:46:52] -> [ENTRANTE] (Origen: A): Get Author aaaa
+[2021/12/06 21:46:52] -> aaaa
+[2021/12/06 21:46:52] -> [SALIENTE] Title Libros del autor aaaa
+[2021/12/06 21:48:17] -> [ENTRANTE] (Origen: A): Get Author asda
+[2021/12/06 21:48:17] -> asda
+[2021/12/06 21:48:17] -> [SALIENTE] Title Libros del autor asda
+[2021/12/06 21:49:48] -> [ENTRANTE] (Origen: A): Get Author asdsad
+[2021/12/06 21:51:37] -> [ENTRANTE] (Origen: A): Get Author sadad
+[2021/12/06 21:51:37] -> sadad
+[2021/12/06 21:51:37] -> [SALIENTE] Title No se encontró
+[2021/12/06 21:52:24] -> [ENTRANTE] (Origen: A): Get Author M
+[2021/12/06 21:52:24] -> M
+[2021/12/06 21:52:24] -> [SALIENTE] Title Libros del autor M: Don Quijote de la Mancha
+[2021/12/06 23:34:08] -> [ENTRANTE] (Origen: A): Get Author Miguel
+[2021/12/06 23:34:08] -> Miguel
+[2021/12/06 23:34:08] -> [SALIENTE] Title Libros del autor Miguel: Don Quijote de la Mancha
+[2021/12/06 23:34:25] -> [ENTRANTE] (Origen: A): Get Author Dra
+[2021/12/06 23:34:25] -> Dra
+[2021/12/06 23:34:25] -> [SALIENTE] Title Libros del autor Dra: Don Quijote de la Mancha
+[2021/12/06 23:35:13] -> [ENTRANTE] (Origen: A): Get Author draco
+[2021/12/06 23:35:13] -> draco
+[2021/12/06 23:35:13] -> [SALIENTE] Title No se encontró
+[2021/12/06 23:43:58] -> [ENTRANTE] (Origen: A): Get Title Principito
+[2021/12/06 23:43:58] -> [SALIENTE] Title El principito, Antoine de Saint Exupery

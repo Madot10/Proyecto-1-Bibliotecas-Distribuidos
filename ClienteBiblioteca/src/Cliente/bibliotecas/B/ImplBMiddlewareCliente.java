@@ -18,7 +18,7 @@ public class ImplBMiddlewareCliente implements IMiddlewareCliente {
 				
 				// 2- Construir url RMI
 				String url = Cliente.obtenerURLrmi(letraDestino);
-				System.out.println("RMI URL: " + url);
+				//System.out.println("RMI URL: " + url);
 				
 				//Registrar salida
 				Cliente.registrarEnLog(cmdTitle,false);
@@ -31,7 +31,7 @@ public class ImplBMiddlewareCliente implements IMiddlewareCliente {
 					IMiddlewareServidor srv = (IMiddlewareServidor) Naming.lookup(url);
 
 					String resultadoZ = srv.GetTitle(ZTitle,"B");
-		            System.out.println("RespuestaZ: " + resultadoZ);
+		            //System.out.println("RespuestaZ: " + resultadoZ);
 		            
 		         // 4- Decodificar a LN
 		            String resultadoLN = "Título " + resultadoZ.split("Title")[1].trim();
@@ -59,7 +59,7 @@ public class ImplBMiddlewareCliente implements IMiddlewareCliente {
 		
 		// 2- Construir url RMI
 		String url = Cliente.obtenerURLrmi(letraDestino);
-		System.out.println("RMI URL: " + url);
+		//System.out.println("RMI URL: " + url);
 		
 		//Registrar salida
 		Cliente.registrarEnLog(cmdAuthor,false);
@@ -72,7 +72,7 @@ public class ImplBMiddlewareCliente implements IMiddlewareCliente {
 			IMiddlewareServidor srv = (IMiddlewareServidor) Naming.lookup(url);
 
 			String resultadoZ = srv.GetAuthor(ZAuthor,"B");
-            System.out.println("RespuestaZ: " + resultadoZ);
+            //System.out.println("RespuestaZ: " + resultadoZ);
             
          // 4- Decodificar a LN
             String resultadoLN = "Título " + resultadoZ.split("Title")[1].trim();

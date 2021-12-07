@@ -1,0 +1,35 @@
+[2021/12/04 21:41:43] -> [SALIENTE] Pedir Libro as
+[2021/12/04 21:41:43] -> [SALIENTE] Get Title as| Destino: A
+[2021/12/04 21:41:44] -> [ENTRANTE] Title No se encontró
+[2021/12/04 22:08:02] -> [SALIENTE] Pedir Libro asda
+[2021/12/04 22:08:02] -> [SALIENTE] Get Title asda| Destino: A
+[2021/12/04 22:08:03] -> [ENTRANTE] Title No se encontró
+[2021/12/06 21:43:58] -> [SALIENTE] Pedir Autor aaa
+[2021/12/06 21:43:58] -> [SALIENTE] Get Author aaa| Destino: A
+[2021/12/06 21:43:59] -> [ENTRANTE] Title Libros del autor aaa
+[2021/12/06 21:46:51] -> [SALIENTE] Pedir Autor aaaa
+[2021/12/06 21:46:51] -> [SALIENTE] Get Author aaaa| Destino: A
+[2021/12/06 21:46:52] -> [ENTRANTE] Title Libros del autor aaaa
+[2021/12/06 21:48:16] -> [SALIENTE] Pedir Autor asda
+[2021/12/06 21:48:16] -> [SALIENTE] Get Author asda| Destino: A
+[2021/12/06 21:48:17] -> [ENTRANTE] Title Libros del autor asda
+[2021/12/06 21:49:48] -> [SALIENTE] Pedir Autor asdsad
+[2021/12/06 21:49:48] -> [SALIENTE] Get Author asdsad| Destino: A
+[2021/12/06 21:51:36] -> [SALIENTE] Pedir Autor sadad
+[2021/12/06 21:51:36] -> [SALIENTE] Get Author sadad| Destino: A
+[2021/12/06 21:51:37] -> [ENTRANTE] Title No se encontró
+[2021/12/06 21:52:23] -> [SALIENTE] Pedir Autor M
+[2021/12/06 21:52:23] -> [SALIENTE] Get Author M| Destino: A
+[2021/12/06 21:52:24] -> [ENTRANTE] Title Libros del autor M: Don Quijote de la Mancha
+[2021/12/06 23:34:07] -> [SALIENTE] Pedir Autor Miguel
+[2021/12/06 23:34:07] -> [SALIENTE] Get Author Miguel| Destino: A
+[2021/12/06 23:34:08] -> [ENTRANTE] Title Libros del autor Miguel: Don Quijote de la Mancha
+[2021/12/06 23:34:24] -> [SALIENTE] Pedir Autor Dra
+[2021/12/06 23:34:24] -> [SALIENTE] Get Author Dra| Destino: A
+[2021/12/06 23:34:25] -> [ENTRANTE] Title Libros del autor Dra: Don Quijote de la Mancha
+[2021/12/06 23:35:12] -> [SALIENTE] Pedir Autor draco
+[2021/12/06 23:35:12] -> [SALIENTE] Get Author draco| Destino: A
+[2021/12/06 23:35:13] -> [ENTRANTE] Title No se encontró
+[2021/12/06 23:43:57] -> [SALIENTE] Pedir Libro Principito
+[2021/12/06 23:43:57] -> [SALIENTE] Get Title Principito| Destino: A
+[2021/12/06 23:43:58] -> [ENTRANTE] Title El principito, Antoine de Saint Exupery
